@@ -1,0 +1,15 @@
+tab,
+md_area,地区表
+ID,地区编码
+name,名称
+parent_id,父区域ID
+area_type,区域类型
+updatetime,更新时间
+tab,
+md_project,项目表
+PROJECTID,项目GUID
+DCPROJECTID,地产门户项目ID
+DCPROJECTNAME,门户项目名称
+NAME,项目名称
+COMPANYGUID,地区GUID
+STATION,项目地址
