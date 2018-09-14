@@ -34,17 +34,17 @@ public class CalculateDllProcessor {
                     }
                     String tableLine = lineStr.substring(6);
                     String[] tableLineArr = tableLine.split("\\|");
-                    String tableName = tableLineArr[0].trim();
+                    String tableName = tableLineArr[0].trim().toLowerCase();
                     sql.append("CREATE TABLE IF NOT EXISTS `"+ tableName+ "` (");
                     continue;
                 }
                 String[] dataLineArr = lineStr.split("\\|");
                 if(dataLineArr.length>=4 && dataLineArr[3].equals("01")){
-                    String columnName = dataLineArr[0].trim();
+                    String columnName = dataLineArr[0].trim().toLowerCase();
                     sql.append("`" + columnName + "` " + dataLineArr[2]+ " COMMENT '" + dataLineArr[1] + "',");
                     sql.append("PRIMARY KEY (`" + columnName + "`),");
                 }else{
-                    String columnName = dataLineArr[0].trim();
+                    String columnName = dataLineArr[0].trim().toLowerCase();
                     sql.append("`" + columnName + "` " + dataLineArr[2]+ " COMMENT '" + dataLineArr[1] + "',");
                 }
                 lineNum++;
